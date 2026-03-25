@@ -1,5 +1,5 @@
 /**
- * A promise(callback) is an object, with two output functions 'resolve' and 'reject'.
+ * A promise is an object, with two output functions 'resolve' and 'reject'.
  * - Output of the resolve(), will be handled using .then(resolveRespone); could by string, number, object, another promise etc.
  * - Output of the reject(), will be handled using .catch(rejectRespone); usually a text
  * 
@@ -12,7 +12,7 @@ function fnPromise(): void {
         return "Executing callback...";
     }
 
-    function main(callback: () => string): Promise<string> {
+    function main(callback: () => string): Promise<string> {                          //Here we are passing callback fn but fn returning promise may have any input type or no input
         console.log("Start of main...");
 
         return new Promise<string>((resolve, reject): void => {
