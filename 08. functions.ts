@@ -15,7 +15,7 @@ function fnBasicFunctions(): void {
         }
         return `Hello ${name}!`;
     }
-    console.log(greet("Vikesh")); // Hello Vikesh!
+    console.log(fngreet("Vikesh")); // Hello Vikesh!
 
     // Function with default parameter
     function fnMultiply(a: number, b: number = 2): number {
